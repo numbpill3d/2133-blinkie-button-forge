@@ -47,20 +47,17 @@ const ButtonCreator: React.FC = () => {
 
   const downloadAsPNG = () => {
     if (!buttonRef.current) return;
-    
-    // In a real implementation, we would use html2canvas or similar library
-    // But for this demo, we'll just show a toast notification
-    alert("PNG download started! (This is a placeholder - in a real app, we would use html2canvas)");
+    alert("PNG download started! (This is a placeholder)");
   };
 
   return (
-    <Windows98Window title="RuneScape 88x32 Button Creator" className="w-full max-w-4xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="space-y-4">
-          <div className="win98-inset p-4 bg-black flex items-center justify-center">
+    <Windows98Window title="RuneScape Button Creator" className="w-full max-w-4xl mx-auto">
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="w-full md:w-2/3 space-y-4">
+          <div className="win98-inset p-4 bg-black min-h-[200px] flex items-center justify-center">
             <div
               ref={buttonRef}
-              className="flex items-center justify-center pixel-perfect"
+              className="flex items-center justify-center pixel-perfect text-sm"
               style={{
                 width: '88px',
                 height: '32px',
@@ -68,27 +65,23 @@ const ButtonCreator: React.FC = () => {
                 color: buttonOptions.textColor,
                 fontFamily: buttonOptions.font === 'runescape' ? 'RuneScape' : 'VT323',
                 border: `1px solid ${buttonOptions.border}`,
-                fontSize: '12px',
-                overflow: 'hidden',
-                textAlign: 'center',
-                padding: '2px'
+                padding: '2px',
               }}
             >
               {buttonOptions.text}
             </div>
           </div>
 
-          <div>
-            <Windows98Button onClick={downloadAsPNG} className="flex items-center">
-              <Download size={16} className="mr-1" />
-              Download as PNG
+          <div className="flex justify-center">
+            <Windows98Button onClick={downloadAsPNG} className="flex items-center gap-2">
+              <Download size={16} /> Save as PNG
             </Windows98Button>
           </div>
         </div>
 
-        <div className="space-y-3">
+        <div className="w-full md:w-1/3 space-y-3 bg-win98-bg p-4">
           <div>
-            <label className="block mb-1">Text:</label>
+            <label className="block mb-1 font-vt">Text:</label>
             <Windows98Input 
               type="text" 
               value={buttonOptions.text} 
@@ -96,24 +89,23 @@ const ButtonCreator: React.FC = () => {
               className="w-full"
               maxLength={15}
             />
-            <p className="text-xs mt-1 text-gray-600">Button size: 88x32 pixels</p>
           </div>
 
           <div>
-            <label className="block mb-1">Background:</label>
+            <label className="block mb-1 font-vt">Background:</label>
             <Windows98Select
               value={buttonOptions.background}
               onChange={handleBackgroundChange}
               className="w-full"
             >
               <option value="black">Black</option>
+              <option value="#1A1F2C">Dark Purple</option>
               <option value="red">Red</option>
-              <option value="#3a3a3a">Dark Gray</option>
             </Windows98Select>
           </div>
 
           <div>
-            <label className="block mb-1">Text Color:</label>
+            <label className="block mb-1 font-vt">Text Color:</label>
             <Windows98Select
               value={buttonOptions.textColor}
               onChange={handleTextColorChange}
@@ -127,7 +119,7 @@ const ButtonCreator: React.FC = () => {
           </div>
 
           <div>
-            <label className="block mb-1">Font:</label>
+            <label className="block mb-1 font-vt">Font:</label>
             <Windows98Select
               value={buttonOptions.font}
               onChange={handleFontChange}
@@ -139,7 +131,7 @@ const ButtonCreator: React.FC = () => {
           </div>
 
           <div>
-            <label className="block mb-1">Border Color:</label>
+            <label className="block mb-1 font-vt">Border Color:</label>
             <Windows98Select
               value={buttonOptions.border}
               onChange={handleBorderChange}
