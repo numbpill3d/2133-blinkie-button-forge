@@ -1,10 +1,10 @@
 
 import React from 'react';
-import { BlinkieProps, BlinkieTemplates } from '../../types/blinkie';
+import type { BlinkieProps, BlinkieTemplates as BlinkieTemplatesType } from '../../types/blinkie';
 import { getFontFamily, getAnimationClass, getRainbowStyle } from '../../utils/blinkieUtils';
 
 interface BlinkieTemplatesProps {
-  templates: BlinkieTemplates;
+  templates: BlinkieTemplatesType;
   onSelectTemplate: (templateName: string) => void;
 }
 
