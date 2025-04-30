@@ -117,8 +117,34 @@ const BlinkieCreator: React.FC = () => {
   return (
     <Windows98Window title="RuneScape Blinkie Creator" className="w-full max-w-4xl mx-auto">
       <div className="flex flex-col md:flex-row gap-4">
+        {/* Template selection area - now central/main area */}
         <div className="w-full md:w-2/3 space-y-4">
-          <div className="win98-inset p-4 bg-black min-h-[200px] flex items-center justify-center">
+          <label className="block mb-1 font-vt font-bold">Templates:</label>
+          <div className="win98-inset bg-white p-4 min-h-[250px] overflow-y-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+              {Object.entries(blinkieTemplates).map(([key, template]) => (
+                <div 
+                  key={key}
+                  className="flex flex-col items-center cursor-pointer hover:bg-gray-200 p-2 border border-gray-300"
+                  onClick={() => selectTemplate(key)}
+                >
+                  <div 
+                    className="w-[150px] h-[20px] mb-2 flex items-center justify-center pixel-perfect text-xs"
+                    style={{
+                      backgroundColor: template.background,
+                      color: template.textColor,
+                      fontFamily: template.font === 'runescape' ? 'RuneScape' : 'VT323',
+                      border: '1px solid #333',
+                    }}
+                  >
+                    {template.text}
+                  </div>
+                  <span className="text-xs font-vt capitalize">{key}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="p-4 bg-black flex items-center justify-center">
             <div
               ref={blinkieRef}
               className={`flex items-center justify-center pixel-perfect text-sm`}
@@ -135,7 +161,7 @@ const BlinkieCreator: React.FC = () => {
               {blinkieOptions.text}
             </div>
           </div>
-
+          
           <div className="flex flex-wrap gap-2 justify-center">
             <Windows98Button onClick={downloadAsPNG} className="flex items-center gap-2">
               <Download size={16} /> Save as PNG
@@ -146,35 +172,10 @@ const BlinkieCreator: React.FC = () => {
           </div>
         </div>
 
+        {/* Editor controls - now in sidebar */}
         <div className="w-full md:w-1/3 space-y-3 bg-win98-bg p-4">
-          <div className="mb-4">
-            <label className="block mb-1 font-vt font-bold">Templates:</label>
-            <div className="win98-inset bg-white p-2 max-h-[120px] overflow-y-auto">
-              <div className="grid grid-cols-1 gap-1">
-                {Object.entries(blinkieTemplates).map(([key, template]) => (
-                  <div 
-                    key={key}
-                    className="flex items-center cursor-pointer hover:bg-gray-200 p-1"
-                    onClick={() => selectTemplate(key)}
-                  >
-                    <div 
-                      className="w-[150px] h-[20px] mr-2 flex items-center justify-center pixel-perfect text-xs"
-                      style={{
-                        backgroundColor: template.background,
-                        color: template.textColor,
-                        fontFamily: template.font === 'runescape' ? 'RuneScape' : 'VT323',
-                        border: '1px solid #333',
-                      }}
-                    >
-                      {template.text}
-                    </div>
-                    <span className="text-xs font-vt capitalize">{key}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
+          <h3 className="font-vt font-bold mb-2">Edit Blinkie:</h3>
+          
           <div>
             <label className="block mb-1 font-vt">Text:</label>
             <Windows98Input 
