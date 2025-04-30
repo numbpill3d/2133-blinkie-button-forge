@@ -14,15 +14,68 @@ interface BlinkieProps {
   isAnimated: boolean;
 }
 
-const BlinkieCreator: React.FC = () => {
-  const [blinkieOptions, setBlinkieOptions] = useState<BlinkieProps>({
+// Predefined templates for users to choose from
+const blinkieTemplates: Record<string, BlinkieProps> = {
+  default: {
     text: "RuneScape",
     background: "black",
     textColor: "red",
     font: "runescape",
     isAnimated: true
-  });
+  },
+  achievement: {
+    text: "99 Slayer",
+    background: "black",
+    textColor: "yellow",
+    font: "runescape",
+    isAnimated: true
+  },
+  skill: {
+    text: "Mining Pro",
+    background: "#1A1F2C",
+    textColor: "lime",
+    font: "runescape",
+    isAnimated: true
+  },
+  combat: {
+    text: "PK Master",
+    background: "red",
+    textColor: "white",
+    font: "runescape",
+    isAnimated: true
+  },
+  quest: {
+    text: "Quest Cape",
+    background: "#1A1F2C",
+    textColor: "yellow",
+    font: "runescape",
+    isAnimated: true
+  },
+  ironman: {
+    text: "Iron Man",
+    background: "black",
+    textColor: "white",
+    font: "runescape",
+    isAnimated: true
+  },
+  oldschool: {
+    text: "OSRS",
+    background: "black",
+    textColor: "red",
+    font: "vt",
+    isAnimated: true
+  },
+  clan: {
+    text: "Dragon Slayers",
+    background: "#1A1F2C",
+    textColor: "red",
+    font: "runescape",
+    isAnimated: true
+  }
+};
 
+const BlinkieCreator: React.FC = () => {
+  const [blinkieOptions, setBlinkieOptions] = useState<BlinkieProps>(blinkieTemplates.default);
   const blinkieRef = useRef<HTMLDivElement>(null);
 
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,6 +96,12 @@ const BlinkieCreator: React.FC = () => {
 
   const handleAnimationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBlinkieOptions({...blinkieOptions, isAnimated: e.target.checked});
+  };
+
+  const selectTemplate = (templateName: string) => {
+    if (blinkieTemplates[templateName]) {
+      setBlinkieOptions(blinkieTemplates[templateName]);
+    }
   };
 
   const downloadAsPNG = () => {
@@ -77,7 +136,7 @@ const BlinkieCreator: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex space-x-2 justify-center">
+          <div className="flex flex-wrap gap-2 justify-center">
             <Windows98Button onClick={downloadAsPNG} className="flex items-center gap-2">
               <Download size={16} /> Save as PNG
             </Windows98Button>
@@ -88,6 +147,34 @@ const BlinkieCreator: React.FC = () => {
         </div>
 
         <div className="w-full md:w-1/3 space-y-3 bg-win98-bg p-4">
+          <div className="mb-4">
+            <label className="block mb-1 font-vt font-bold">Templates:</label>
+            <div className="win98-inset bg-white p-2 max-h-[120px] overflow-y-auto">
+              <div className="grid grid-cols-1 gap-1">
+                {Object.entries(blinkieTemplates).map(([key, template]) => (
+                  <div 
+                    key={key}
+                    className="flex items-center cursor-pointer hover:bg-gray-200 p-1"
+                    onClick={() => selectTemplate(key)}
+                  >
+                    <div 
+                      className="w-[150px] h-[20px] mr-2 flex items-center justify-center pixel-perfect text-xs"
+                      style={{
+                        backgroundColor: template.background,
+                        color: template.textColor,
+                        fontFamily: template.font === 'runescape' ? 'RuneScape' : 'VT323',
+                        border: '1px solid #333',
+                      }}
+                    >
+                      {template.text}
+                    </div>
+                    <span className="text-xs font-vt capitalize">{key}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div>
             <label className="block mb-1 font-vt">Text:</label>
             <Windows98Input 

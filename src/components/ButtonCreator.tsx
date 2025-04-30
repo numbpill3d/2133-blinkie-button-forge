@@ -14,15 +14,68 @@ interface ButtonProps {
   border: string;
 }
 
-const ButtonCreator: React.FC = () => {
-  const [buttonOptions, setButtonOptions] = useState<ButtonProps>({
+// Predefined templates for buttons
+const buttonTemplates: Record<string, ButtonProps> = {
+  default: {
     text: "RuneScape",
     background: "black",
     textColor: "red",
     font: "runescape",
     border: "red"
-  });
+  },
+  skill: {
+    text: "Mining",
+    background: "black",
+    textColor: "yellow",
+    font: "runescape",
+    border: "yellow"
+  },
+  combat: {
+    text: "Attack",
+    background: "#1A1F2C",
+    textColor: "red",
+    font: "runescape",
+    border: "red"
+  },
+  magic: {
+    text: "Magic",
+    background: "black",
+    textColor: "lime",
+    font: "runescape",
+    border: "lime"
+  },
+  quest: {
+    text: "Quest",
+    background: "#1A1F2C",
+    textColor: "yellow",
+    font: "runescape",
+    border: "yellow"
+  },
+  items: {
+    text: "Items",
+    background: "black",
+    textColor: "white",
+    font: "runescape",
+    border: "white"
+  },
+  clan: {
+    text: "Clan",
+    background: "red",
+    textColor: "white",
+    font: "runescape",
+    border: "white"
+  },
+  retro: {
+    text: "OSRS",
+    background: "black",
+    textColor: "red",
+    font: "vt",
+    border: "red"
+  }
+};
 
+const ButtonCreator: React.FC = () => {
+  const [buttonOptions, setButtonOptions] = useState<ButtonProps>(buttonTemplates.default);
   const buttonRef = useRef<HTMLDivElement>(null);
 
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,6 +96,12 @@ const ButtonCreator: React.FC = () => {
 
   const handleBorderChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setButtonOptions({...buttonOptions, border: e.target.value});
+  };
+
+  const selectTemplate = (templateName: string) => {
+    if (buttonTemplates[templateName]) {
+      setButtonOptions(buttonTemplates[templateName]);
+    }
   };
 
   const downloadAsPNG = () => {
@@ -80,6 +139,34 @@ const ButtonCreator: React.FC = () => {
         </div>
 
         <div className="w-full md:w-1/3 space-y-3 bg-win98-bg p-4">
+          <div className="mb-4">
+            <label className="block mb-1 font-vt font-bold">Templates:</label>
+            <div className="win98-inset bg-white p-2 max-h-[120px] overflow-y-auto">
+              <div className="grid grid-cols-1 gap-1">
+                {Object.entries(buttonTemplates).map(([key, template]) => (
+                  <div 
+                    key={key}
+                    className="flex items-center cursor-pointer hover:bg-gray-200 p-1"
+                    onClick={() => selectTemplate(key)}
+                  >
+                    <div 
+                      className="w-[88px] h-[32px] mr-2 flex items-center justify-center pixel-perfect text-xs"
+                      style={{
+                        backgroundColor: template.background,
+                        color: template.textColor,
+                        fontFamily: template.font === 'runescape' ? 'RuneScape' : 'VT323',
+                        border: `1px solid ${template.border}`,
+                      }}
+                    >
+                      {template.text}
+                    </div>
+                    <span className="text-xs font-vt capitalize">{key}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div>
             <label className="block mb-1 font-vt">Text:</label>
             <Windows98Input 
