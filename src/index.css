@@ -65,3 +65,59 @@
 .pixel-perfect {
   image-rendering: pixelated;
 }
+
+/* Animation classes for blinkies and buttons */
+.blinkie-rainbow {
+  animation: rainbow 3s linear infinite;
+}
+
+.blinkie-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.blinkie-glow {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+.blinkie-fire {
+  animation: fire 2s ease-in infinite;
+}
+
+.blinkie-sparkle {
+  animation: sparkle 3s ease infinite;
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  15% { color: orange; }
+  30% { color: yellow; }
+  45% { color: green; }
+  60% { color: blue; }
+  75% { color: indigo; }
+  90% { color: violet; }
+  100% { color: red; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.7; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.7; transform: scale(0.98); }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 0px currentColor; }
+  50% { text-shadow: 0 0 10px currentColor; }
+  100% { text-shadow: 0 0 0px currentColor; }
+}
+
+@keyframes fire {
+  0% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff8800; }
+  50% { text-shadow: 0 0 5px #ff0000, 0 0 15px #ff8800, 0 0 20px #ff0000; }
+  100% { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff8800; }
+}
+
+@keyframes sparkle {
+  0% { text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffff; }
+  50% { text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffff, 0 0 30px #ffffff; }
+  100% { text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffff; }
+}
