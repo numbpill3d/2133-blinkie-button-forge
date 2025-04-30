@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import Windows98Window from './Windows98Window';
 import Windows98Button from './Windows98Button';
@@ -276,8 +275,11 @@ const ButtonCreator: React.FC = () => {
               ))}
             </div>
           </div>
+        </div>
 
-          <div className="p-4 bg-black flex items-center justify-center">
+        <div className="w-full md:w-1/3 space-y-3 bg-win98-bg p-4">
+          {/* Preview positioned above the edit section */}
+          <div className="p-4 mb-4 bg-black flex items-center justify-center">
             <div
               ref={buttonRef}
               className="flex items-center justify-center pixel-perfect text-sm"
@@ -297,14 +299,6 @@ const ButtonCreator: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex justify-center">
-            <Windows98Button onClick={downloadAsPNG} className="flex items-center gap-2">
-              <Download size={16} /> Save as PNG
-            </Windows98Button>
-          </div>
-        </div>
-
-        <div className="w-full md:w-1/3 space-y-3 bg-win98-bg p-4">
           <h3 className="font-vt font-bold mb-2">Edit Button:</h3>
           
           <div>
