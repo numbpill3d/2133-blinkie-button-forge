@@ -94,7 +94,7 @@ const BlinkieCreator: React.FC = () => {
   return (
     <>
       <AnimatedBackground backgroundType="oldWeb" speed={10000} />
-      <Windows98Window title="RuneScape Blinkie Creator" className="w-full max-w-4xl mx-auto relative z-10">
+      <Windows98Window title="[2133] Blinkie Creator" className="w-full max-w-4xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row gap-4">
           {/* Template selection area */}
           <div className="w-full md:w-2/3 space-y-4">
