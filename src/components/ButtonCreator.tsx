@@ -785,7 +785,7 @@ const ButtonCreator: React.FC = () => {
   return (
     <>
       <AnimatedBackground backgroundType="oldWeb" speed={15000} />
-      <Windows98Window title="RuneScape Button Creator" className="w-full max-w-4xl mx-auto relative z-10">
+      <Windows98Window title="[2133] Button Creator" className="w-full max-w-4xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row gap-4">
           <div className="w-full md:w-2/3 space-y-4">
             <div className="flex justify-between items-center">
