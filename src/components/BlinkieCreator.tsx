@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import Windows98Window from './Windows98Window';
 import Windows98Button from './Windows98Button';
@@ -118,7 +117,7 @@ const BlinkieCreator: React.FC = () => {
                 </Windows98Button>
               </div>
             </div>
-            <div className="win98-inset bg-white p-4 min-h-[250px] overflow-y-auto">
+            <div className="win98-inset bg-white p-2 h-[300px] overflow-y-auto">
               <BlinkieTemplates 
                 templates={getCurrentPageTemplates()} 
                 onSelectTemplate={selectTemplate} 

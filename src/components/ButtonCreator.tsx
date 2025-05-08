@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from 'react';
 import Windows98Window from './Windows98Window';
 import Windows98Button from './Windows98Button';
@@ -551,16 +552,16 @@ const ButtonCreator: React.FC = () => {
               </div>
             </div>
             
-            <div className="win98-inset bg-white p-4 min-h-[250px] overflow-y-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
+            <div className="win98-inset bg-white p-2 h-[300px] overflow-y-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-1">
                 {Object.entries(getCurrentPageTemplates()).map(([key, template]) => (
                   <div 
                     key={key}
-                    className="flex flex-col items-center cursor-pointer hover:bg-gray-200 p-2 border border-gray-300"
+                    className="flex flex-col items-center cursor-pointer hover:bg-gray-200 p-2 border border-gray-300 rounded-md"
                     onClick={() => selectTemplate(key)}
                   >
                     <div 
-                      className="w-[88px] h-[32px] mb-1 flex items-center justify-center pixel-perfect text-xs"
+                      className="w-[88px] h-[32px] mb-1 flex items-center justify-center pixel-perfect text-xs overflow-hidden"
                       style={{
                         backgroundColor: template.background,
                         color: template.textColor !== 'rainbow' ? template.textColor : undefined,
@@ -575,6 +576,7 @@ const ButtonCreator: React.FC = () => {
                     >
                       {template.text}
                     </div>
+                    <span className="text-[10px] text-gray-600 mt-1">{key}</span>
                   </div>
                 ))}
               </div>
