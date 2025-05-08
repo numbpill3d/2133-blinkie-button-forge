@@ -1,7 +1,7 @@
 
 import { BlinkieTemplates } from '../types/blinkie';
 
-// Expanded templates with more variety
+// Expanded templates with more variety and border options
 export const blinkieTemplates: BlinkieTemplates = {
   default: {
     text: "RuneScape",
@@ -43,7 +43,9 @@ export const blinkieTemplates: BlinkieTemplates = {
     background: "black",
     textColor: "white",
     font: "runescape",
-    isAnimated: true
+    isAnimated: true,
+    border: "medium",
+    borderColor: "silver"
   },
   oldschool: {
     text: "OSRS",
@@ -57,7 +59,9 @@ export const blinkieTemplates: BlinkieTemplates = {
     background: "#1A1F2C",
     textColor: "red",
     font: "runescape",
-    isAnimated: true
+    isAnimated: true,
+    border: "ridge",
+    borderColor: "gold"
   },
   rainbow: {
     text: "Party Hat",
@@ -73,7 +77,9 @@ export const blinkieTemplates: BlinkieTemplates = {
     textColor: "cyan",
     font: "runescape",
     isAnimated: true,
-    animationType: "pulse"
+    animationType: "pulse",
+    border: "double",
+    borderColor: "cyan"
   },
   glowing: {
     text: "Ancient Magick",
@@ -88,7 +94,9 @@ export const blinkieTemplates: BlinkieTemplates = {
     background: "black",
     textColor: "gold",
     font: "runescape",
-    isAnimated: true
+    isAnimated: true,
+    border: "double",
+    borderColor: "gold"
   },
   fire: {
     text: "Infernal Cape",
@@ -96,7 +104,9 @@ export const blinkieTemplates: BlinkieTemplates = {
     textColor: "orange",
     font: "runescape",
     isAnimated: true,
-    animationType: "fire"
+    animationType: "fire",
+    border: "outset",
+    borderColor: "red"
   },
   ice: {
     text: "Ice Barrage",
@@ -104,35 +114,45 @@ export const blinkieTemplates: BlinkieTemplates = {
     textColor: "#acf",
     font: "runescape",
     isAnimated: true,
-    animationType: "sparkle"
+    animationType: "sparkle",
+    border: "ridge",
+    borderColor: "cyan"
   },
   retro: {
     text: "Classic",
     background: "#222",
     textColor: "#f8f8f8",
     font: "fixedsys",
-    isAnimated: false
+    isAnimated: false,
+    border: "inset",
+    borderColor: "silver"
   },
   desert: {
     text: "Desert Treasure",
     background: "#8B4513",
     textColor: "#FFD700",
     font: "runescape",
-    isAnimated: false
+    isAnimated: false,
+    border: "dotted",
+    borderColor: "gold"
   },
   woodcutting: {
     text: "Woodcutting",
     background: "#1A1F2C", 
     textColor: "#3CB371",
     font: "runescape",
-    isAnimated: true
+    isAnimated: true,
+    border: "dashed",
+    borderColor: "lime"
   },
   fishing: {
     text: "Fishing",
     background: "#000080",
     textColor: "#00FFFF",
     font: "runescape",
-    isAnimated: true
+    isAnimated: true,
+    border: "groove",
+    borderColor: "cyan"
   },
   fletching: {
     text: "Fletching",
@@ -148,5 +168,98 @@ export const blinkieTemplates: BlinkieTemplates = {
     font: "runescape",
     isAnimated: true,
     animationType: "fire"
+  },
+  // New templates with various border styles
+  platinum: {
+    text: "Platinum",
+    background: "#1A1F2C",
+    textColor: "silver",
+    font: "runescape",
+    isAnimated: true,
+    border: "ridge",
+    borderColor: "white"
+  },
+  dragon: {
+    text: "Dragon Armor",
+    background: "#300",
+    textColor: "red",
+    font: "runescape",
+    isAnimated: true,
+    border: "outset",
+    borderColor: "red"
+  },
+  barrows: {
+    text: "Barrows",
+    background: "#222",
+    textColor: "#acf",
+    font: "runescape",
+    isAnimated: true,
+    animationType: "glow",
+    border: "groove",
+    borderColor: "#8B4513"
+  },
+  agility: {
+    text: "Agility",
+    background: "#0c1222",
+    textColor: "cyan",
+    font: "runescape",
+    isAnimated: true,
+    border: "dashed",
+    borderColor: "white"
+  },
+  magic: {
+    text: "99 Magic",
+    background: "#000080",
+    textColor: "#9b87f5",
+    font: "runescape",
+    isAnimated: true,
+    border: "double",
+    borderColor: "#9b87f5"
+  },
+  runecraft: {
+    text: "Runecraft",
+    background: "black",
+    textColor: "#acf",
+    font: "runescape",
+    isAnimated: true,
+    border: "groove",
+    borderColor: "#9b87f5"
+  },
+  cooking: {
+    text: "Cooking",
+    background: "#800000",
+    textColor: "white",
+    font: "runescape",
+    isAnimated: false,
+    border: "dotted",
+    borderColor: "orange"
+  },
+  prayer: {
+    text: "Prayer",
+    background: "#1A1F2C",
+    textColor: "white",
+    font: "runescape",
+    isAnimated: true,
+    animationType: "pulse",
+    border: "ridge",
+    borderColor: "gold"
+  },
+  thieving: {
+    text: "Thieving",
+    background: "black",
+    textColor: "#3CB371",
+    font: "runescape",
+    isAnimated: false,
+    border: "dashed",
+    borderColor: "#3CB371"
+  },
+  hunter: {
+    text: "Hunter",
+    background: "#1A1F2C",
+    textColor: "orange",
+    font: "runescape",
+    isAnimated: false,
+    border: "dotted",
+    borderColor: "orange"
   }
 };

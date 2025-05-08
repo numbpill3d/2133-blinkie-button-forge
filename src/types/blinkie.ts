@@ -7,6 +7,9 @@ export interface BlinkieProps {
   isAnimated: boolean;
   animationType?: string;
   backgroundImage?: string;
+  border?: string;
+  borderColor?: string;
+  borderStyle?: string;
 }
 
 export type BlinkieTemplates = Record<string, BlinkieProps>;

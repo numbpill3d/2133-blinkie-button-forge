@@ -38,3 +38,25 @@ export const getRainbowStyle = (textColor: string) => {
   }
   return {};
 };
+
+// Helper function for border styling
+export const getBorderStyle = (blinkieOptions: BlinkieProps) => {
+  if (!blinkieOptions.border || blinkieOptions.border === 'none') {
+    return { border: '1px solid #333' }; // Default border
+  }
+  
+  const borderWidth = 
+    blinkieOptions.border === 'thin' ? '1px' :
+    blinkieOptions.border === 'medium' ? '2px' :
+    blinkieOptions.border === 'thick' ? '3px' :
+    '2px';
+  
+  const borderStyle = 
+    ['dotted', 'dashed', 'groove', 'ridge', 'inset', 'outset', 'double'].includes(blinkieOptions.border)
+      ? blinkieOptions.border 
+      : 'solid';
+  
+  return {
+    border: `${borderWidth} ${borderStyle} ${blinkieOptions.borderColor || 'white'}`,
+  };
+};

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { BlinkieProps } from '../../types/blinkie';
-import { getAnimationClass, getFontFamily, getRainbowStyle } from '../../utils/blinkieUtils';
+import { getAnimationClass, getFontFamily, getRainbowStyle, getBorderStyle } from '../../utils/blinkieUtils';
 
 interface BlinkiePreviewProps {
   blinkieOptions: BlinkieProps;
@@ -23,7 +23,7 @@ const BlinkiePreview: React.FC<BlinkiePreviewProps> = ({
         color: blinkieOptions.textColor !== 'rainbow' ? blinkieOptions.textColor : undefined,
         fontFamily: getFontFamily(blinkieOptions.font),
         animation: getAnimationClass(blinkieOptions),
-        border: '1px solid #333',
+        ...getBorderStyle(blinkieOptions),
         ...(blinkieOptions.textColor === 'rainbow' ? getRainbowStyle(blinkieOptions.textColor) : {}),
       }}
     >

@@ -38,6 +38,18 @@ const BlinkieCreator: React.FC = () => {
     setBlinkieOptions({...blinkieOptions, animationType: e.target.value});
   };
 
+  const handleBorderChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setBlinkieOptions({...blinkieOptions, border: e.target.value});
+  };
+
+  const handleBorderColorChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setBlinkieOptions({...blinkieOptions, borderColor: e.target.value});
+  };
+
+  const handleBorderStyleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setBlinkieOptions({...blinkieOptions, borderStyle: e.target.value});
+  };
+
   const selectTemplate = (templateName: string) => {
     if (blinkieTemplates[templateName]) {
       setBlinkieOptions(blinkieTemplates[templateName]);
@@ -66,12 +78,6 @@ const BlinkieCreator: React.FC = () => {
               onSelectTemplate={selectTemplate} 
             />
           </div>
-          <div className="p-4 bg-black flex items-center justify-center">
-            <BlinkiePreview 
-              blinkieOptions={blinkieOptions} 
-              previewRef={blinkieRef} 
-            />
-          </div>
           
           <div className="flex flex-wrap gap-2 justify-center">
             <Windows98Button onClick={downloadAsPNG} className="flex items-center gap-2">
@@ -83,8 +89,16 @@ const BlinkieCreator: React.FC = () => {
           </div>
         </div>
 
-        {/* Editor controls */}
+        {/* Editor controls with preview moved above */}
         <div className="w-full md:w-1/3">
+          {/* Preview now positioned above the edit section */}
+          <div className="p-4 mb-4 bg-black flex items-center justify-center">
+            <BlinkiePreview 
+              blinkieOptions={blinkieOptions} 
+              previewRef={blinkieRef} 
+            />
+          </div>
+
           <BlinkieEditor
             blinkieOptions={blinkieOptions}
             onTextChange={handleTextChange}
@@ -93,6 +107,9 @@ const BlinkieCreator: React.FC = () => {
             onFontChange={handleFontChange}
             onAnimationChange={handleAnimationChange}
             onAnimationTypeChange={handleAnimationTypeChange}
+            onBorderChange={handleBorderChange}
+            onBorderColorChange={handleBorderColorChange}
+            onBorderStyleChange={handleBorderStyleChange}
           />
         </div>
       </div>

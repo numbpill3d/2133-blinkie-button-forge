@@ -1,7 +1,7 @@
 
 import React from 'react';
-import type { BlinkieProps, BlinkieTemplates as BlinkieTemplatesType } from '../../types/blinkie';
-import { getFontFamily, getAnimationClass, getRainbowStyle } from '../../utils/blinkieUtils';
+import { BlinkieProps, BlinkieTemplates as BlinkieTemplatesType } from '../../types/blinkie';
+import { getFontFamily, getAnimationClass, getRainbowStyle, getBorderStyle } from '../../utils/blinkieUtils';
 
 interface BlinkieTemplatesProps {
   templates: BlinkieTemplatesType;
@@ -26,11 +26,11 @@ const BlinkieTemplates: React.FC<BlinkieTemplatesProps> = ({
               backgroundColor: template.background,
               color: template.textColor !== 'rainbow' ? template.textColor : undefined,
               fontFamily: getFontFamily(template.font),
-              border: '1px solid #333',
               animation: template.isAnimated ? 
                 (template.animationType ? 
                   getAnimationClass(template) : 'blink 1s steps(1) infinite') 
                 : 'none',
+              ...getBorderStyle(template),
               ...(template.textColor === 'rainbow' ? getRainbowStyle(template.textColor) : {}),
             }}
           >
