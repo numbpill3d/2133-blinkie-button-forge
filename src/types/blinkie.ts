@@ -10,6 +10,12 @@ export interface BlinkieProps {
   border?: string;
   borderColor?: string;
   borderStyle?: string;
+  page?: number;
 }
 
 export type BlinkieTemplates = Record<string, BlinkieProps>;
+
+export interface AnimatedBackgroundProps {
+  backgroundType: string;
+  speed?: number;
+}

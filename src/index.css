@@ -1,9 +1,65 @@
 
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap');
 
 @font-face {
   font-family: 'RuneScape';
   src: url('/fonts/runescape.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'C64';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/C64_Pro_Mono-STYLE.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amiga Forever';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/Amiga-Forever.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM PC';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/IBM-PC.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atari Classic';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/Atari-Classic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple II';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/Apple-II.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CGA';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/CGA.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZX Spectrum';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/ZX-Spectrum.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -120,4 +176,12 @@
   0% { text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffff; }
   50% { text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffff, 0 0 30px #ffffff; }
   100% { text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffff; }
+}
+
+.transition-all {
+  transition-property: all;
+}
+
+.duration-3000 {
+  transition-duration: 3000ms;
 }

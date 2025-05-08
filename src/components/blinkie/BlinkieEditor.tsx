@@ -61,6 +61,10 @@ const BlinkieEditor: React.FC<BlinkieEditorProps> = ({
           <option value="#800000">Maroon</option>
           <option value="#000080">Navy</option>
           <option value="#8B4513">Brown</option>
+          <option value="#006400">Dark Green</option>
+          <option value="#4B0082">Indigo</option>
+          <option value="#800080">Purple</option>
+          <option value="#2F4F4F">Dark Slate</option>
         </Windows98Select>
       </div>
 
@@ -84,6 +88,11 @@ const BlinkieEditor: React.FC<BlinkieEditorProps> = ({
           <option value="#00FFFF">Aqua</option>
           <option value="#3CB371">Medium Green</option>
           <option value="#DEB887">Wood Brown</option>
+          <option value="#FF6347">Tomato Red</option>
+          <option value="#4682B4">Steel Blue</option>
+          <option value="#9370DB">Medium Purple</option>
+          <option value="#FFD700">Golden Yellow</option>
+          <option value="#FA8072">Salmon</option>
           <option value="rainbow">Rainbow</option>
         </Windows98Select>
       </div>
@@ -99,6 +108,14 @@ const BlinkieEditor: React.FC<BlinkieEditorProps> = ({
           <option value="vt">VT323 (Retro)</option>
           <option value="fixedsys">Fixedsys (DOS)</option>
           <option value="runeblood">RuneBlood</option>
+          <option value="pixel">Pixel</option>
+          <option value="commodore">Commodore 64</option>
+          <option value="amiga">Amiga</option>
+          <option value="ibm">IBM PC</option>
+          <option value="atari">Atari</option>
+          <option value="apple2">Apple II</option>
+          <option value="cga">CGA</option>
+          <option value="zxspectrum">ZX Spectrum</option>
         </Windows98Select>
       </div>
       
@@ -143,6 +160,11 @@ const BlinkieEditor: React.FC<BlinkieEditorProps> = ({
               <option value="orange">Orange</option>
               <option value="#acf">Ice Blue</option>
               <option value="silver">Silver</option>
+              <option value="#FF6347">Tomato Red</option>
+              <option value="#4682B4">Steel Blue</option>
+              <option value="#9370DB">Medium Purple</option>
+              <option value="#FFD700">Golden Yellow</option>
+              <option value="#FA8072">Salmon</option>
             </Windows98Select>
           </div>
         </>

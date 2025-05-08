@@ -15,6 +15,14 @@ export default {
       fontFamily: {
         'vt': ['VT323', 'monospace'],
         'runescape': ['RuneScape', 'serif'],
+        'pixel': ['"Press Start 2P"', 'monospace'],
+        'commodore': ['C64', 'monospace'],
+        'amiga': ['"Amiga Forever"', 'monospace'],
+        'ibm': ['"IBM PC"', 'monospace'],
+        'atari': ['"Atari Classic"', 'monospace'],
+        'apple2': ['"Apple II"', 'monospace'],
+        'cga': ['CGA', 'monospace'],
+        'zxspectrum': ['"ZX Spectrum"', 'monospace'],
       },
       colors: {
         'win98': {
