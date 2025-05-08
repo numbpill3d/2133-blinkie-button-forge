@@ -261,5 +261,200 @@ export const blinkieTemplates: BlinkieTemplates = {
     isAnimated: false,
     border: "dotted",
     borderColor: "orange"
+  },
+  // Additional new templates with more variety
+  gradient1: {
+    text: "Rainbow Fade",
+    background: "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)",
+    textColor: "white",
+    font: "runescape",
+    isAnimated: true,
+    border: "solid",
+    borderColor: "white"
+  },
+  gradient2: {
+    text: "Sunset",
+    background: "linear-gradient(90deg, #FF5F6D, #FFC371)",
+    textColor: "white",
+    font: "runescape",
+    isAnimated: false,
+    border: "groove",
+    borderColor: "#FF5F6D"
+  },
+  gradient3: {
+    text: "Ocean",
+    background: "linear-gradient(90deg, #2980B9, #6DD5FA)",
+    textColor: "white",
+    font: "runescape",
+    isAnimated: true,
+    animationType: "pulse",
+    border: "ridge",
+    borderColor: "#2980B9"
+  },
+  gradient4: {
+    text: "Forest",
+    background: "linear-gradient(90deg, #134E5E, #71B280)",
+    textColor: "white",
+    font: "runescape",
+    isAnimated: false,
+    border: "double",
+    borderColor: "#71B280"
+  },
+  pattern1: {
+    text: "Checkered",
+    background: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjUiIGhlaWdodD0iNSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjUiIHdpZHRoPSI1IiBoZWlnaHQ9IjUiIGZpbGw9IiMwMDAiLz48cmVjdCB5PSI1IiB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMDAwIi8+PHJlY3QgeD0iNSIgeT0iNSIgd2lkdGg9IjUiIGhlaWdodD0iNSIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==')",
+    textColor: "red",
+    font: "runescape",
+    isAnimated: true,
+    border: "solid",
+    borderColor: "red"
+  },
+  pattern2: {
+    text: "Dots",
+    background: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNSIgY3k9IjUiIHI9IjEiIGZpbGw9IiNmZmYiLz48L3N2Zz4=')",
+    textColor: "white",
+    font: "runescape",
+    isAnimated: true,
+    animationType: "glow",
+    border: "dotted",
+    borderColor: "white"
+  },
+  pattern3: {
+    text: "Stars",
+    background: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwIDEgTDEyIDcgTDE4IDcgTDEzIDEwIEwxNSAxNiBMMTAgMTMgTDUgMTYgTDcgMTAgTDIgNyBMOCA3IFoiIGZpbGw9IiNmZmY4Ii8+PC9zdmc+')",
+    textColor: "yellow",
+    font: "runescape",
+    isAnimated: true,
+    animationType: "sparkle",
+    border: "ridge",
+    borderColor: "yellow"
+  },
+  metallic1: {
+    text: "Gold Plated",
+    background: "linear-gradient(180deg, #BF953F, #FCF6BA, #B38728, #FBF5B7)",
+    textColor: "black",
+    font: "runescape",
+    isAnimated: true,
+    animationType: "pulse",
+    border: "ridge",
+    borderColor: "#BF953F"
+  },
+  metallic2: {
+    text: "Silver",
+    background: "linear-gradient(180deg, #cecece, #ffffff, #cecece)",
+    textColor: "black",
+    font: "runescape",
+    isAnimated: true,
+    border: "ridge",
+    borderColor: "#cecece"
+  },
+  metallic3: {
+    text: "Bronze",
+    background: "linear-gradient(180deg, #CD7F32, #FFC380, #CD7F32)",
+    textColor: "black",
+    font: "runescape",
+    isAnimated: false,
+    border: "ridge",
+    borderColor: "#CD7F32"
+  },
+  textured1: {
+    text: "Wood Panel",
+    background: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjOEI0NTEzIi8+PHBhdGggZD0iTTAgMCBMNDAgMCBMNDAgNSBMMCA1IFoiIGZpbGw9IiM2QjM1MTMiIG9wYWNpdHk9IjAuMyIvPjxwYXRoIGQ9Ik0wIDEwIEw0MCAxMCBMNDAgMTUgTDAgMTUgWiIgZmlsbD0iIzZCMzUxMyIgb3BhY2l0eT0iMC4zIi8+PHBhdGggZD0iTTAgMjAgTDQwIDIwIEw0MCAyNSBMMCAyNSBaIiBmaWxsPSIjNkIzNTEzIiBvcGFjaXR5PSIwLjMiLz48cGF0aCBkPSJNMCAzMCBMNDAgMzAgTDQwIDM1IEwwIDM1IFoiIGZpbGw9IiM2QjM1MTMiIG9wYWNpdHk9IjAuMyIvPjwvc3ZnPg==')",
+    textColor: "#FFD700",
+    font: "runescape",
+    isAnimated: false,
+    border: "groove",
+    borderColor: "#8B4513"
+  },
+  textured2: {
+    text: "Stone",
+    background: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjNzA3MDcwIi8+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjNjA2MDYwIi8+PHJlY3QgeD0iMjAiIHk9IjAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMiIgZmlsbD0iIzY4Njg2OCIvPjxyZWN0IHg9IjEwIiB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEwIiBmaWxsPSIjNjU2NTY1Ii8+PHJlY3QgeD0iMzAiIHk9IjIwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiM2MjYyNjIiLz48L3N2Zz4=')",
+    textColor: "white",
+    font: "runescape",
+    isAnimated: false,
+    border: "ridge",
+    borderColor: "#505050"
+  },
+  pixel1: {
+    text: "Pixel Art",
+    background: "black",
+    textColor: "#FF69B4",
+    font: "pixel",
+    isAnimated: true,
+    border: "solid",
+    borderColor: "#FF69B4"
+  },
+  pixel2: {
+    text: "8-Bit Game",
+    background: "#006400",
+    textColor: "#ADFF2F",
+    font: "pixel",
+    isAnimated: true,
+    animationType: "pulse",
+    border: "double",
+    borderColor: "#ADFF2F"
+  },
+  pixel3: {
+    text: "Retro Gaming",
+    background: "#0000FF",
+    textColor: "#00FFFF",
+    font: "pixel",
+    isAnimated: false,
+    border: "ridge",
+    borderColor: "#00FFFF"
+  },
+  commodore1: {
+    text: "CBM BASIC",
+    background: "#0000AA",
+    textColor: "#AAAAFF",
+    font: "commodore",
+    isAnimated: true,
+    border: "solid",
+    borderColor: "#AAAAFF"
+  },
+  commodore2: {
+    text: "LOAD *,8,1",
+    background: "#000088",
+    textColor: "#FFFFFF",
+    font: "commodore",
+    isAnimated: false,
+    border: "ridge",
+    borderColor: "#FFFFFF"
+  },
+  amiga1: {
+    text: "Workbench",
+    background: "#0055AA",
+    textColor: "#FFFFFF",
+    font: "amiga",
+    isAnimated: true,
+    border: "ridge",
+    borderColor: "#FF8800"
+  },
+  amiga2: {
+    text: "Amiga 500",
+    background: "#000000",
+    textColor: "#00AAFF",
+    font: "amiga",
+    isAnimated: false,
+    border: "groove",
+    borderColor: "#FF0000"
+  },
+  ibm1: {
+    text: "MS-DOS",
+    background: "#000000",
+    textColor: "#AAAAAA",
+    font: "ibm",
+    isAnimated: true,
+    border: "solid",
+    borderColor: "#AAAAAA"
+  },
+  ibm2: {
+    text: "PC XT",
+    background: "#000000",
+    textColor: "#55FF55",
+    font: "ibm",
+    isAnimated: false,
+    border: "ridge",
+    borderColor: "#55FF55"
   }
 };

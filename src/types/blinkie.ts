@@ -10,6 +10,8 @@ export interface BlinkieProps {
   border?: string;
   borderColor?: string;
   borderStyle?: string;
+  texture?: string;
+  gradientType?: string;
   page?: number;
 }
 

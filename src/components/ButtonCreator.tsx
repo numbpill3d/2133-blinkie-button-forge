@@ -16,6 +16,8 @@ interface ButtonProps {
   border: string;
   isAnimated?: boolean;
   animationType?: string;
+  texture?: string;
+  backgroundImage?: string;
   page?: number;
 }
 
@@ -411,6 +413,260 @@ const buttonTemplates: Record<string, ButtonProps> = {
     textColor: "#FFFF55",
     font: "zxspectrum",
     border: "#FFFF55"
+  },
+  // New gradient templates
+  gradient1: {
+    text: "Sunset",
+    background: "linear-gradient(90deg, #FF5F6D, #FFC371)",
+    textColor: "white",
+    font: "runescape",
+    border: "#FF5F6D"
+  },
+  gradient2: {
+    text: "Ocean",
+    background: "linear-gradient(90deg, #2980B9, #6DD5FA)",
+    textColor: "white",
+    font: "runescape",
+    border: "#2980B9"
+  },
+  gradient3: {
+    text: "Forest",
+    background: "linear-gradient(90deg, #134E5E, #71B280)",
+    textColor: "white",
+    font: "runescape",
+    border: "#71B280"
+  },
+  gradient4: {
+    text: "Purple Haze",
+    background: "linear-gradient(90deg, #4A00E0, #8E2DE2)",
+    textColor: "white",
+    font: "runescape",
+    border: "#4A00E0"
+  },
+  // Animated glowing button
+  glowing1: {
+    text: "Glowing",
+    background: "#222",
+    textColor: "#00FFFF",
+    font: "runescape",
+    border: "#00FFFF",
+    isAnimated: true,
+    animationType: "glow"
+  },
+  glowing2: {
+    text: "Pulse",
+    background: "#222",
+    textColor: "#FF00FF",
+    font: "runescape",
+    border: "#FF00FF",
+    isAnimated: true,
+    animationType: "pulse"
+  },
+  glowing3: {
+    text: "Fire Glow",
+    background: "#300",
+    textColor: "#FFA500",
+    font: "runescape",
+    border: "#FF4500",
+    isAnimated: true,
+    animationType: "fire"
+  },
+  // MSX themed
+  msx1: {
+    text: "MSX BASIC",
+    background: "#000000",
+    textColor: "#FFFFFF",
+    font: "msx",
+    border: "#FF0000"
+  },
+  msx2: {
+    text: "MSX2",
+    background: "#000088",
+    textColor: "#00FF00",
+    font: "msx",
+    border: "#00FF00"
+  },
+  // Arcade themed
+  arcade1: {
+    text: "INSERT COIN",
+    background: "#000000",
+    textColor: "#FFFF00",
+    font: "arcade",
+    border: "#FF0000",
+    isAnimated: true,
+    animationType: "blink"
+  },
+  arcade2: {
+    text: "HIGH SCORE",
+    background: "#000088",
+    textColor: "#00FFFF",
+    font: "arcade",
+    border: "#00FFFF"
+  },
+  // Nintendo themed
+  nintendo1: {
+    text: "NES",
+    background: "#7C0000",
+    textColor: "#FFFFFF",
+    font: "nintendo",
+    border: "#FFFFFF"
+  },
+  nintendo2: {
+    text: "GAME BOY",
+    background: "#9BBC0F",
+    textColor: "#0F380F",
+    font: "gameboy",
+    border: "#0F380F"
+  },
+  // Sega themed
+  sega1: {
+    text: "GENESIS",
+    background: "#000000",
+    textColor: "#FFFFFF",
+    font: "sega",
+    border: "#FF0000"
+  },
+  sega2: {
+    text: "MASTER SYS",
+    background: "#0000AA",
+    textColor: "#FFFFFF",
+    font: "sega",
+    border: "#00AAFF"
+  },
+  // Teletext style
+  teletext1: {
+    text: "CEEFAX",
+    background: "#000000",
+    textColor: "#FFFF00",
+    font: "teletext",
+    border: "#00FF00"
+  },
+  teletext2: {
+    text: "ORACLE",
+    background: "#000088",
+    textColor: "#FFFFFF",
+    font: "teletext",
+    border: "#FF00FF"
+  },
+  // Terminal style
+  terminal1: {
+    text: "UNIX",
+    background: "#000000",
+    textColor: "#00FF00",
+    font: "terminal",
+    border: "#00FF00"
+  },
+  terminal2: {
+    text: "BBS",
+    background: "#000044",
+    textColor: "#AAAAFF",
+    font: "terminal",
+    border: "#AAAAFF"
+  },
+  // Pattern backgrounds
+  pattern1: {
+    text: "Checkered",
+    background: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjUiIGhlaWdodD0iNSIgZmlsbD0iI2ZmZiIvPjxyZWN0IHg9IjUiIHdpZHRoPSI1IiBoZWlnaHQ9IjUiIGZpbGw9IiMwMDAiLz48cmVjdCB5PSI1IiB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMDAwIi8+PHJlY3QgeD0iNSIgeT0iNSIgd2lkdGg9IjUiIGhlaWdodD0iNSIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==')",
+    textColor: "red",
+    font: "runescape",
+    border: "red"
+  },
+  pattern2: {
+    text: "Dots",
+    background: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNSIgY3k9IjUiIHI9IjEiIGZpbGw9IiNmZmYiLz48L3N2Zz4=')",
+    textColor: "white",
+    font: "runescape",
+    border: "white"
+  },
+  pattern3: {
+    text: "Stars",
+    background: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEwIDEgTDEyIDcgTDE4IDcgTDEzIDEwIEwxNSAxNiBMMTAgMTMgTDUgMTYgTDcgMTAgTDIgNyBMOCA3IFoiIGZpbGw9IiNmZmY4Ii8+PC9zdmc+')",
+    textColor: "gold",
+    font: "runescape",
+    border: "gold"
+  },
+  // Metallic gradients
+  metallic1: {
+    text: "Gold",
+    background: "linear-gradient(180deg, #BF953F, #FCF6BA, #B38728, #FBF5B7)",
+    textColor: "black",
+    font: "runescape",
+    border: "#BF953F"
+  },
+  metallic2: {
+    text: "Silver",
+    background: "linear-gradient(180deg, #cecece, #ffffff, #cecece)",
+    textColor: "black",
+    font: "runescape",
+    border: "#cecece"
+  },
+  metallic3: {
+    text: "Bronze",
+    background: "linear-gradient(180deg, #CD7F32, #FFC380, #CD7F32)",
+    textColor: "black",
+    font: "runescape",
+    border: "#CD7F32"
+  },
+  // Animated effects
+  animated1: {
+    text: "Bouncing",
+    background: "#222",
+    textColor: "#FFFF00",
+    font: "runescape",
+    border: "#FFFF00",
+    isAnimated: true,
+    animationType: "bounce"
+  },
+  animated2: {
+    text: "Shaking",
+    background: "#222",
+    textColor: "#FF00FF",
+    font: "runescape",
+    border: "#FF00FF",
+    isAnimated: true,
+    animationType: "shake"
+  },
+  animated3: {
+    text: "Flipping",
+    background: "#222",
+    textColor: "#00FFFF",
+    font: "runescape",
+    border: "#00FFFF",
+    isAnimated: true,
+    animationType: "flip"
+  },
+  animated4: {
+    text: "Zig Zag",
+    background: "#222",
+    textColor: "#FF6600",
+    font: "runescape",
+    border: "#FF6600",
+    isAnimated: true,
+    animationType: "zigzag"
+  },
+  animated5: {
+    text: "Glitch",
+    background: "#222",
+    textColor: "#00FF00",
+    font: "runescape",
+    border: "#00FF00",
+    isAnimated: true,
+    animationType: "glitch"
+  },
+  // Textured surfaces
+  textured1: {
+    text: "Wood",
+    background: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjOEI0NTEzIi8+PHBhdGggZD0iTTAgMCBMNDAgMCBMNDAgNSBMMCA1IFoiIGZpbGw9IiM2QjM1MTMiIG9wYWNpdHk9IjAuMyIvPjxwYXRoIGQ9Ik0wIDEwIEw0MCAxMCBMNDAgMTUgTDAgMTUgWiIgZmlsbD0iIzZCMzUxMyIgb3BhY2l0eT0iMC4zIi8+PHBhdGggZD0iTTAgMjAgTDQwIDIwIEw0MCAyNSBMMCAyNSBaIiBmaWxsPSIjNkIzNTEzIiBvcGFjaXR5PSIwLjMiLz48cGF0aCBkPSJNMCAzMCBMNDAgMzAgTDQwIDM1IEwwIDM1IFoiIGZpbGw9IiM2QjM1MTMiIG9wYWNpdHk9IjAuMyIvPjwvc3ZnPg==')",
+    textColor: "#FFD700",
+    font: "runescape",
+    border: "#8B4513"
+  },
+  textured2: {
+    text: "Stone",
+    background: "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjNzA3MDcwIi8+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiBmaWxsPSIjNjA2MDYwIi8+PHJlY3QgeD0iMjAiIHk9IjAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMiIgZmlsbD0iIzY4Njg2OCIvPjxyZWN0IHg9IjEwIiB5PSIxMCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEwIiBmaWxsPSIjNjU2NTY1Ii8+PHJlY3QgeD0iMzAiIHk9IjIwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiM2MjYyNjIiLz48L3N2Zz4=')",
+    textColor: "white",
+    font: "runescape",
+    border: "#505050"
   }
 };
 

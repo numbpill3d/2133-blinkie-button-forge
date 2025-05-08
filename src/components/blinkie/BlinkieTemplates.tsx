@@ -32,6 +32,9 @@ const BlinkieTemplates: React.FC<BlinkieTemplatesProps> = ({
                 : 'none',
               ...getBorderStyle(template),
               ...(template.textColor === 'rainbow' ? getRainbowStyle(template.textColor) : {}),
+              backgroundImage: template.backgroundImage,
+              backgroundSize: 'cover',
+              backgroundRepeat: 'repeat'
             }}
           >
             {template.text}
