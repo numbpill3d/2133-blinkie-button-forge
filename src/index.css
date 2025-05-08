@@ -65,6 +65,62 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'MSX';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/MSX-Screen0.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arcade';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/Arcade-Classic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nintendo';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/Nintendo-NES.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GameBoy';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/GameBoy.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sega';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/Sega.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Teletext';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/Teletext.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Terminal';
+  src: url('https://cdn.jsdelivr.net/gh/dev-support/web-fonts/fonts/Terminal.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -143,6 +199,31 @@
   animation: sparkle 3s ease infinite;
 }
 
+/* New animations */
+.blinkie-rotate {
+  animation: rotate 10s linear infinite;
+}
+
+.blinkie-bounce {
+  animation: bounce 1s infinite;
+}
+
+.blinkie-shake {
+  animation: shake 0.5s infinite;
+}
+
+.blinkie-flip {
+  animation: flip 2s infinite;
+}
+
+.blinkie-zigzag {
+  animation: zigzag 2s ease-in-out infinite;
+}
+
+.blinkie-glitch {
+  animation: glitch 0.5s infinite;
+}
+
 @keyframes rainbow {
   0% { color: red; }
   15% { color: orange; }
@@ -176,6 +257,45 @@
   0% { text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffff; }
   50% { text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffff, 0 0 30px #ffffff; }
   100% { text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffff; }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(2px); }
+}
+
+@keyframes flip {
+  0% { transform: scaleX(1); }
+  50% { transform: scaleX(-1); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes zigzag {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px) translateY(-2px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(2px) translateY(-2px); }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
 }
 
 .transition-all {

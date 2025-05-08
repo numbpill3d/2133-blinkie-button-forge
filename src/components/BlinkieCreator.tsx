@@ -11,7 +11,7 @@ import { Download, ChevronLeft, ChevronRight } from 'lucide-react';
 import { toast } from './ui/sonner';
 import AnimatedBackground from './AnimatedBackground';
 
-const TEMPLATES_PER_PAGE = 12;
+const TEMPLATES_PER_PAGE = 16;
 
 const BlinkieCreator: React.FC = () => {
   const [blinkieOptions, setBlinkieOptions] = useState<BlinkieProps>(blinkieTemplates.default);

@@ -19,7 +19,7 @@ interface ButtonProps {
 }
 
 // Templates per page
-const TEMPLATES_PER_PAGE = 12;
+const TEMPLATES_PER_PAGE = 16;
 
 // Expanded templates with more variety
 const buttonTemplates: Record<string, ButtonProps> = {
@@ -552,7 +552,7 @@ const ButtonCreator: React.FC = () => {
             </div>
             
             <div className="win98-inset bg-white p-4 min-h-[250px] overflow-y-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
                 {Object.entries(getCurrentPageTemplates()).map(([key, template]) => (
                   <div 
                     key={key}

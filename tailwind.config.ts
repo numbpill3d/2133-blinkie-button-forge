@@ -23,6 +23,13 @@ export default {
         'apple2': ['"Apple II"', 'monospace'],
         'cga': ['CGA', 'monospace'],
         'zxspectrum': ['"ZX Spectrum"', 'monospace'],
+        'msx': ['MSX', 'monospace'],
+        'arcade': ['Arcade', 'monospace'],
+        'nintendo': ['Nintendo', 'monospace'],
+        'gameboy': ['GameBoy', 'monospace'],
+        'sega': ['Sega', 'monospace'],
+        'teletext': ['Teletext', 'monospace'],
+        'terminal': ['Terminal', 'monospace'],
       },
       colors: {
         'win98': {
@@ -74,6 +81,8 @@ export default {
       },
       backgroundImage: {
         'stars': "url('/lovable-uploads/2b052671-48b3-4c4f-b6cb-ff5708c94649.png')",
+        'checkered': "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2YwZjBmMCIvPjxyZWN0IHk9IjIwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IiNmMGYwZjAiLz48cmVjdCB4PSIyMCIgeT0iMjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==')",
+        'dots': "url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNSIgY3k9IjUiIHI9IjEiIGZpbGw9IiM0MDQwNDAiLz48Y2lyY2xlIGN4PSIxNSIgY3k9IjE1IiByPSIxIiBmaWxsPSIjNDA0MDQwIi8+PC9zdmc+')",
       },
       animation: {
         "blink": "blink 1s steps(1) infinite",
@@ -82,6 +91,12 @@ export default {
         "glow": "glow 1.5s ease-in-out infinite",
         "fire": "fire 2s ease-in infinite",
         "sparkle": "sparkle 3s ease infinite",
+        "rotate": "rotate 10s linear infinite",
+        "bounce": "bounce 1s infinite",
+        "shake": "shake 0.5s infinite",
+        "flip": "flip 2s infinite",
+        "zigzag": "zigzag 2s ease-in-out infinite",
+        "glitch": "glitch 0.5s infinite",
       },
       keyframes: {
         blink: {
@@ -117,6 +132,39 @@ export default {
           "0%": { textShadow: "0 0 5px #ffffff, 0 0 10px #00ffff" },
           "50%": { textShadow: "0 0 10px #ffffff, 0 0 20px #00ffff, 0 0 30px #ffffff" },
           "100%": { textShadow: "0 0 5px #ffffff, 0 0 10px #00ffff" },
+        },
+        rotate: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        bounce: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
+        shake: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "25%": { transform: "translateX(-2px)" },
+          "50%": { transform: "translateX(0)" },
+          "75%": { transform: "translateX(2px)" },
+        },
+        flip: {
+          "0%": { transform: "scaleX(1)" },
+          "50%": { transform: "scaleX(-1)" },
+          "100%": { transform: "scaleX(1)" },
+        },
+        zigzag: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "25%": { transform: "translateX(-2px) translateY(-2px)" },
+          "50%": { transform: "translateX(0)" },
+          "75%": { transform: "translateX(2px) translateY(-2px)" },
+        },
+        glitch: {
+          "0%": { transform: "translate(0)" },
+          "20%": { transform: "translate(-2px, 2px)" },
+          "40%": { transform: "translate(-2px, -2px)" },
+          "60%": { transform: "translate(2px, 2px)" },
+          "80%": { transform: "translate(2px, -2px)" },
+          "100%": { transform: "translate(0)" },
         },
       },
     },
