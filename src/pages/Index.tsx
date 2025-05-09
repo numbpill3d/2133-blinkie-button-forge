@@ -11,14 +11,14 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center bg-stars p-4 sm:p-8">
       <Windows98Window 
-        title="Welcome to RuneScape Blinkie Forge" 
+        title="Welcome to 2133 Blinkie Forge" 
         className="w-full max-w-4xl mx-auto mb-4"
       >
         <h1 className="font-runescape text-rs-red text-4xl text-center mb-2">
-          RuneScape Blinkie Forge
+          2133 Blinkie Forge
         </h1>
         <p className="text-center mb-4 font-vt">
-          Create your own RuneScape themed blinkies (150x20) and buttons (88x32)!
+          Create your own 2133-style blinkies (150x20) and buttons (88x32)!
         </p>
       </Windows98Window>
 
@@ -47,12 +47,13 @@ const Index = () => {
       >
         <div className="space-y-2 font-vt">
           <p>Blinkies were tiny 150×20 pixel animated GIFs that were popular in forums and personal websites during the early 2000s. They were used to share interests, show off achievements, or just for fun!</p>
-          <p>This generator lets you create your own RuneScape themed blinkies and buttons in classic Old School RuneScape style.</p>
+          <p>This generator lets you create your own 2133-style blinkies and buttons in classic retro style.</p>
         </div>
       </Windows98Window>
 
       <footer className="w-full max-w-4xl mx-auto mt-6 text-center text-white text-xs font-vt">
-        <p>© 2025 RuneScape Blinkie Forge | Windows 98 style interface</p>
+        <p>© 2025 2133 Blinkie Forge | Windows 98 style interface</p>
+        <p className="mt-1">Made by voidrane / 2133</p>
       </footer>
     </div>
   );

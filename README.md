@@ -1,3 +1,4 @@
+
 # 2133 Blinkie & Button Generator  
 **still blinking in the ruins.**
 
@@ -40,7 +41,7 @@ built entirely in html, css, and js — zero backend. host it anywhere, modify i
 
 1. visit the live link above  
 2. fill out the form with your custom text, colors, and style  
-3. click “generate”  
+3. click "generate"  
 4. right-click > save your creation, or embed it directly into your site
 
 ---
@@ -52,3 +53,5 @@ clone this repo and open `index.html` in your browser, or deploy it to GitHub Pa
 ```bash
 git clone https://github.com/yourusername/2133-blinkie-generator.git
 cd 2133-blinkie-generator
+
+```
