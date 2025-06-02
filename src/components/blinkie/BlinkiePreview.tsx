@@ -23,9 +23,11 @@ const BlinkiePreview: React.FC<BlinkiePreviewProps> = ({
       justifyContent: 'center',
       overflow: 'hidden',
       imageRendering: 'pixelated' as const,
-      WebkitImageRendering: 'pixelated',
-      MozImageRendering: 'crisp-edges',
-    };
+    } as React.CSSProperties & { WebkitImageRendering?: string; MozImageRendering?: string };
+
+    // Add vendor-specific properties
+    (baseStyles as any).WebkitImageRendering = 'pixelated';
+    (baseStyles as any).MozImageRendering = 'crisp-edges';
 
     // Handle background (gradient, pattern, or solid color)
     if (blinkieOptions.background) {

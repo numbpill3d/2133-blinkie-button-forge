@@ -46,8 +46,8 @@ const Index = () => {
         className="w-full max-w-4xl mx-auto mt-4"
       >
         <div className="space-y-2 font-vt">
-          <p>Blinkies were tiny 150×20 pixel animated GIFs that were popular in forums and personal websites during the early 2000s. They were used to share interests, show off achievements, or just for fun!</p>
-          <p>This generator lets you create your own 2133-style blinkies and buttons in classic retro style.</p>
+          <p>This blinkie/button forge was crafted by voidrane splicer, better known as numbpilled. she is a schizoaffective and homeless programmer, living as an urban stealth camper/scavenger type in the apathetic and uninteresting streets of charlotte nc. if you like her work, please consider donating any amount to her apple pay (+1 828 266 8648) or by purchasing any of her <a href="https://ko-fi.com/numbpilled" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 underline">html codes and templates</a>.</p>
+          <p>Her own personal websites can be found at <a href="http://nolove.neocities.org" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 underline">nolove.neocities.org</a> and <a href="http://voidrane.nekoweb.org" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 underline">voidrane.nekoweb.org</a>, please do come and visit for a while~!</p>
         </div>
       </Windows98Window>
 
