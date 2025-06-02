@@ -176,6 +176,8 @@
 
 .pixel-perfect {
   image-rendering: pixelated;
+  -webkit-image-rendering: pixelated;
+  -moz-image-rendering: crisp-edges;
 }
 
 /* Animation classes for blinkies and buttons */
@@ -233,6 +235,13 @@
   75% { color: indigo; }
   90% { color: violet; }
   100% { color: red; }
+}
+
+/* Rainbow text animation for background-clip text */
+@keyframes rainbow-text {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes pulse {

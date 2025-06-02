@@ -12,6 +12,61 @@ const BlinkieTemplates: React.FC<BlinkieTemplatesProps> = ({
   templates, 
   onSelectTemplate 
 }) => {
+  const getTemplateStyles = (template: BlinkieProps): React.CSSProperties => {
+    const baseStyles: React.CSSProperties = {
+      width: '150px',
+      height: '20px',
+      fontSize: '12px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden',
+      fontFamily: getFontFamily(template.font),
+      imageRendering: 'pixelated' as const,
+      WebkitImageRendering: 'pixelated',
+      MozImageRendering: 'crisp-edges',
+    };
+
+    // Handle background (gradient, pattern, or solid color)
+    if (template.background) {
+      if (template.background.startsWith('linear-gradient') || 
+          template.background.startsWith('url(')) {
+        baseStyles.background = template.background;
+      } else {
+        baseStyles.backgroundColor = template.background;
+      }
+    }
+
+    // Handle backgroundImage if specified
+    if (template.backgroundImage) {
+      baseStyles.backgroundImage = template.backgroundImage;
+      baseStyles.backgroundSize = 'cover';
+      baseStyles.backgroundRepeat = 'repeat';
+    }
+
+    // Handle text color and rainbow effect
+    if (template.textColor === 'rainbow') {
+      const rainbowStyles = getRainbowStyle(template.textColor);
+      Object.assign(baseStyles, rainbowStyles);
+    } else {
+      baseStyles.color = template.textColor;
+    }
+
+    // Handle border
+    const borderStyles = getBorderStyle(template);
+    Object.assign(baseStyles, borderStyles);
+
+    // Handle animation
+    if (template.isAnimated) {
+      const animationValue = getAnimationClass(template);
+      if (animationValue && animationValue !== 'none') {
+        baseStyles.animation = animationValue;
+      }
+    }
+
+    return baseStyles;
+  };
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-1">
       {Object.entries(templates).map(([key, template]) => (
@@ -21,21 +76,8 @@ const BlinkieTemplates: React.FC<BlinkieTemplatesProps> = ({
           onClick={() => onSelectTemplate(key)}
         >
           <div 
-            className="w-[150px] h-[20px] mb-1 flex items-center justify-center pixel-perfect text-xs overflow-hidden"
-            style={{
-              backgroundColor: template.background,
-              color: template.textColor !== 'rainbow' ? template.textColor : undefined,
-              fontFamily: getFontFamily(template.font),
-              animation: template.isAnimated ? 
-                (template.animationType ? 
-                  getAnimationClass(template) : 'blink 1s steps(1) infinite') 
-                : 'none',
-              ...getBorderStyle(template),
-              ...(template.textColor === 'rainbow' ? getRainbowStyle(template.textColor) : {}),
-              backgroundImage: template.backgroundImage,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'repeat'
-            }}
+            className="mb-1 pixel-perfect"
+            style={getTemplateStyles(template)}
           >
             {template.text}
           </div>

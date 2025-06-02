@@ -48,20 +48,22 @@ export const getFontFamily = (font: string) => {
 };
 
 // Helper function for rainbow text
-export const getRainbowStyle = (textColor: string) => {
+export const getRainbowStyle = (textColor: string): React.CSSProperties => {
   if (textColor === 'rainbow') {
     return {
-      background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)',
+      background: 'linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0080ff, #8000ff, #ff00ff)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
       backgroundClip: 'text',
+      backgroundSize: '200% 100%',
+      animation: 'rainbow-text 3s linear infinite',
     };
   }
   return {};
 };
 
 // Helper function for border styling
-export const getBorderStyle = (blinkieOptions: BlinkieProps) => {
+export const getBorderStyle = (blinkieOptions: BlinkieProps): React.CSSProperties => {
   if (!blinkieOptions.border || blinkieOptions.border === 'none') {
     return {}; // No border
   }
