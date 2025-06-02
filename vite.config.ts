@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: './', // Add base ./ to fix GitHub Pages deployment
+  base: process.env.NODE_ENV === 'production' ? '/2133-blinkie-button-forge/' : '/',
   server: {
     host: "::",
     port: 8080,

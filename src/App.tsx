@@ -8,9 +8,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
-// Get the repository name from the URL for GitHub Pages
-const repoName = window.location.pathname.split('/')[1];
-const basename = repoName ? `/${repoName}` : '';
+
+// GitHub Pages specific configuration
+const basename = process.env.NODE_ENV === 'production' ? '/2133-blinkie-button-forge' : '';
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
