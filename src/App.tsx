@@ -9,8 +9,9 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// GitHub Pages specific configuration
-const basename = process.env.NODE_ENV === 'production' ? '/2133-blinkie-button-forge' : '';
+// GitHub Pages project site is served under /2133-blinkie-button-forge/.
+// import.meta.env.BASE_URL always matches vite.config `base`, unlike process.env.NODE_ENV.
+const basename = import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL.replace(/\/$/, "");
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
