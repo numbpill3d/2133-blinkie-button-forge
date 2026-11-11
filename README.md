@@ -2,6 +2,9 @@
 # 2133 Blinkie & Button Generator  
 **still blinking in the ruins.**
 
+![2133 Blinkie and Button Forge live generator](docs/screenshots/blinkie-forge.png)
+
+
 [→ visit the generator](https://numbpill3d.github.io/2133-blinkie-button-forge/)  
 
 
